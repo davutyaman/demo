@@ -13,13 +13,14 @@ $Number_List = 100.5;
 //$num-ber= 400;
 //$0number = 500;
 $NUMBER = 100;
-$NUMBeR = 100;
+$NUMBeR = 10;
 echo $name . " " . $NUMBeR;
 
 $name = "<h1> HELLO</h1>";
 
 echo $name;
 
+echo $name . " " . $Number_List
     
 ?>
 

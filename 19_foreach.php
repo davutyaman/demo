@@ -8,18 +8,12 @@
 
 <?php 
 
-$numbers = array(345,397,676,385,2657,5784);
-    
-foreach($numbers as $number){
+ $numbers = array(4,5,6,7,8,9,10);
 
-echo $number . "<br>";
-
-}    
-    
+foreach($numbers as $number) {
+    echo $number + 1 . "<br>";
+}
     
 ?>
-
-
-
 </body>
 </html>

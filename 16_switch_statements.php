@@ -8,32 +8,31 @@
    
 <?php 
 
-$number = 100;
+$number = 433;
 
-switch($number){
+switch($number) {
 
     case 34:
-    echo "it is 34";
-    break;
-    case 37:
-    echo "is it 34";
-    break;
-    case 35:
-    echo "is it 34";
-     break;
-    case 24:
-    echo "is it 24";
-      break;
-    
-    default : 
-     echo "we could not find anything";
-    break;
+        echo "that 34";
+        break;
+    case 43:
+        echo "hoho 43";
+        break;
+    case 25:
+        echo "toto 25";
+        break;
+    case 143:
+        echo "hoho 143";
+        break;
+    case 225:
+        echo "toto 225";
+        break;
 
-
+    default:
+        echo "üzdün paşam";
 }
-    
-    
-    
+
+
 ?>
     
 </body>

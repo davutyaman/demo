@@ -5,7 +5,7 @@
     <title>Document</title>
 </head>
 <body> 
- 
+ <!-- asdas -->
 <?php 
 
 /* This function below displays text

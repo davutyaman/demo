@@ -8,16 +8,10 @@
 
 <?php 
 
-for($counter = 0; $counter < 10; $counter++){
-
-    echo $counter . "<br>" ;
-
-}
-    
-    
+    for($counter = 4; $counter <= 10; $counter++ ) {
+        echo $counter + 1 . "<br>";
+    }
     
 ?>
-
-
 </body>
 </html>

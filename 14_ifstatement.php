@@ -8,29 +8,14 @@
 
 <?php 
 
-if(3 > 10){
-
-echo "three is less than ten";
-
-} elseif( 4 > 5) {
-
-echo "of course four is less than five";
-
+if(3 > 5) {
+echo "that's true";
+} elseif( 4 == 4) {
+    echo "its true too";
+} else {
+    echo "write maths!";
 }
-
-else {
-
-echo "it is not";
-
-}
-
-    
-    
 ?>
-
-
-
-
 
 </body>
 </html>
