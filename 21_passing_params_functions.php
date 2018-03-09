@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
 
-<?php 
+    <?php
 
-function greeting($message){
-    echo $message;
-}
-
-
-greeting("Hi Customer how are you?");
+    function normalSentence($sentence){
+       echo $sentence;
+    }
     
+    normalSentence("am i normal or my sentences are normal i do not know right now, i will learn after this course <br>");
     
 ?>
 
-<?php 
+    <?php
     
+    function sumAndSubNumbers($number1, $number2, $number3) {
+        $sum = $number1 + $number2 + $number3;
+        $sub = $number1 - $number2 - $number3;
 
-function addNumbers($number1, $number2){
-
-$sum = $number1 + $number2;
-
-echo $sum;
+        echo $sum + $sub . "<br>" . $sum . "<br>" . $sub;
+    }
     
-}
+    sumAndSubNumbers(1000,500,300);
 
-
-addNumbers(345,3462);
-    
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
+
 </html>

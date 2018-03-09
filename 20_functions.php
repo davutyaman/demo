@@ -1,45 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
 
-<?php 
+    <?php
 
-function init(){
-
-
-say_Something();
-echo "<br>";
-calculate();  
+function totalWord(){
+firstThing();
+    echo "<br>";
+lastThing();
 
 }
 
-
-
-
-function calculate(){
-
-    echo 456 + 345;
-
+function firstThing(){
+    echo 777 + 444;
 }
 
-
-function say_Something(){
-
-   echo "Hello Student, do you like the class? yes? okay great";
-
+function lastThing(){
+    echo "this sentence is writed by me but you don't know why like me";
 }
+    
+    totalWord();
 
-  init();  
-    
-    
-    
 ?>
 
-
-
 </body>
+
 </html>
