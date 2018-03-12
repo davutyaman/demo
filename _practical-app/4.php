@@ -1,36 +1,37 @@
 <?php include "functions.php" ?>
 <?php include "includes/header.php" ?>
 
-	<section class="content">
+<section class="content">
 
-	<aside class="col-xs-4">
+    <aside class="col-xs-4">
 
-		<?php Navigation();?>
-			
-		
-	</aside><!--SIDEBAR-->
+        <?php Navigation();?>
 
+    </aside>
+    <!--SIDEBAR-->
+    <article class="main-content col-xs-8">
 
-<article class="main-content col-xs-8">
+        <?php
+    function returnCalc($num1, $num2) {
+        $result = $num1 + $num2;
+        echo $result . "<br>";
+    }
+    returnCalc(7,3);
 
-	
-	<?php  
+function calculation() {
+        $number1 = 78;
+        $number2 = 92;
+        $sum = $number1 + $number2;
+    return $sum;
+    }
 
-/*  Step1: Define a function and make it return a calculation of 2 numbers
+$result = calculation();
 
-	Step 2: Make a function that passes parameters and call it using parameter values
-
-
- */
-
+        echo $result;
 	
 ?>
 
+    </article>
+    <!--MAIN CONTENT-->
 
-
-
-
-</article><!--MAIN CONTENT-->
-
-
-<?php include "includes/footer.php" ?>
+    <?php include "includes/footer.php" ?>

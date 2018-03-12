@@ -10,22 +10,13 @@
 $number = 10;
 $number = 1000;
 
-$number = "Edwin";
+$number = "Davut";
 echo $number . "<br>";
 
 define("NAME", 1000);
 
 echo NAME;
-
-
-
-    
-    
     
 ?>
-   
- 
-   
-    
 </body>
 </html>

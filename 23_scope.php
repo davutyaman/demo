@@ -23,11 +23,10 @@ echo "<br>";
 convert();
 
 echo $x;
-
+echo "<br>";
 echo $x;
 
-    
-    
+
 ?>
 
 </body>

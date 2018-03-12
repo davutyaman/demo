@@ -10,20 +10,20 @@
 			
 		</aside><!--SIDEBAR-->
 
-
 <article class="main-content col-xs-8">
  
+ <form action="6.php" method="post">
+     <input type="submit" name="submit" value="SUBMIT FORM">
 
-	<?php  
+ </form>
 
-/*  Step1: Make a form that submits one value to POST super global
+	<?php
 
+    if(isset($_POST['submit'])) {
+        echo $_POST['submit'];
+    }
 
- */
-
-	
 ?>
-
 
 </article><!--MAIN CONTENT-->
 <?php include "includes/footer.php" ?>
