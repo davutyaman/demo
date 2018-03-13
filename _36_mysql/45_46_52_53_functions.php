@@ -2,24 +2,57 @@
 <?php
 
 
+function loginUSer() {
+
+
+if(isset($_POST['submit'])) {
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$connection = mysqli_connect('localhost', 'root', '112358', 'loginapp');
+
+    if($connection) {
+
+    echo "We are connected <br>";
+
+    } else {
+
+    die("Database connection failed <br>");
+
+    }
+
+if($username && $password) {
+echo "un:" . $username . "<br>";
+echo "pw:" . $password;
+
+ } else {
+
+        echo "this field cannot be empty";
+
+    }
+
+}
+
+}
+
 function createRows() {
 
 if(isset($_POST['submit'])) {
-// global $connection;
+global $connection;
     
 $username = $_POST['username'];
 $password = $_POST['password'];
     
     $connection = mysqli_connect('localhost', 'root', '112358', 'loginapp');
 
-/*$username = mysqli_real_escape_string($connection, $username );
+$username = mysqli_real_escape_string($connection, $username );
 $password = mysqli_real_escape_string($connection, $password );
-
+/*
 $hashFormat = "$2y$10$"; 
 $salt = "iusesomecrazystrings22";
 $hashF_and_salt = $hashFormat . $salt;
-$password = crypt($password,$hashF_and_salt);   
-    
+$password = crypt($password,$hashF_and_salt);
 */
     $query = "INSERT INTO users(username,password) ";
     $query .= "VALUES ('$username', '$password')";
@@ -50,7 +83,6 @@ $password = crypt($password,$hashF_and_salt);
 }
 
 
-
 }
 
 function readRows() {
@@ -69,14 +101,12 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 
-
-
 function showAllData() {
     global $connection;
     $query = "SELECT * FROM users";
     $result = mysqli_query($connection, $query);
     if(!$result) {
-        die('Query FAILED' . mysqli_error());
+        die('Query FAILED' . mysqli_error($connection));
     }
 
     while($row = mysqli_fetch_assoc($result)) {
@@ -87,7 +117,6 @@ function showAllData() {
     }
     
 }
-
 
 function UpdateTable() {
     if(isset($_POST['submit'])) {
@@ -113,7 +142,6 @@ $query .= "WHERE id = $id ";
     }
         
     }
-    
 
 }
 

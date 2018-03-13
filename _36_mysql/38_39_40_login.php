@@ -1,34 +1,8 @@
-<?php 
+<?php include "45_db.php";?>
+<?php include "45_46_52_53_functions.php" ?>
 
-if(isset($_POST['submit'])) {
-   
-$username = $_POST['username'];
-$password = $_POST['password'];
-    
-$connection = mysqli_connect('localhost', 'root', '112358', 'loginapp');
-    
-    if($connection) {
-    
-    echo "We are connected <br>";
-    
-    } else {
-    
-    die("Database connection failed <br>");
-    
-    }
-
-if($username && $password) {
-echo "un:" . $username . "<br>";
-echo "pw:" . $password;
-
- } else {
-    
-        echo "this field cannot be blank";
-
-    }
-
-}
-
+<?php
+loginUSer();
 ?>
 
 <!DOCTYPE html>
