@@ -1,14 +1,14 @@
-<?php include "db.php";?>
-<?php include "functions.php" ?>
+<?php include "45_db.php";?>
+<?php include "45_46_52_53_functions.php" ?>
 <?php createRows(); ?>
 
-<?php include "includes/header.php" ?>
+<?php include "_includes/header.php" ?>
 
 <div class="container">
     
     <div class="col-sm-6">
        <h1 class="text-center">Create</h1>
-        <form action="login_create.php" method="post">
+        <form action="43_50_51_53_54_login_create.php" method="post">
             <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" class="form-control">
@@ -25,4 +25,4 @@
     </div>
 
 
-<?php include "includes/footer.php"?>
+<?php include "_includes/footer.php"?>
