@@ -5,35 +5,29 @@
 	<aside class="col-xs-4">
 
 		<?php Navigation();?>
-			
-			
+
 	</aside><!--SIDEBAR-->
 
 <article class="main-content col-xs-8">
-
 	
 	<?php  
 
-	/*  Step 1: Use the Make a class called Dog
+    class Dog {
+        var $eyeColor = "black";
+        var $nose = "good";
+        var $behavior = "understandable";
 
-		Step 2: Set some properties for Dog, Example, eye colors, nose, or fur color
+        function showAll() {
+           echo $this->eyeColor . "<br>";
+           echo $this->nose . "<br>";
+           echo $this->behavior . "<br>";
+        }
+    }
 
-		Step 4: Make a method named ShowAll that echos all the properties
-
-		Step 5: Instantiate the class / create object and call it pitbull
-
-Step 6: Call the method ShowAll
-
-	
-
-		
-	*/
+$pitbull = new Dog();
+$pitbull->showAll();
 	
 	?>
-
-
-
-
 
 </article><!--MAIN CONTENT-->
 
