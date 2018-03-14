@@ -1,9 +1,8 @@
-<?php 
-
-echo $_POST['name'];
+<?php
+$name = $_POST['name'];
+echo $name;
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,13 +12,14 @@ echo $_POST['name'];
 </head>
 <body>
 
-<form action="the_post.php" method="post">
+<form action="58_the_post.php" method="post">
    
-   <input type="tex" name="name">
+   <input type="text" name="name">
    
    <input type="submit">
     
-    
+
+
 </form>
 
 

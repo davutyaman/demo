@@ -1,37 +1,58 @@
 <?php include "functions.php" ?>
-<?php include "includes/header.php" ?>
+
+<?php
+session_start();
+$_SESSION['message'] = "merhaba benim adım nameee";
+
+
+$expiration = time() + (60*60*24);
+
+setcookie('Davut', 'This value is crazy value', $expiration);
+
+?>
 
 
 
-	<section class="content">
-
-		<aside class="col-xs-4">
-
-		<?php Navigation();?>
-			
-			
-		</aside><!--SIDEBAR-->
+    <?php include "includes/header.php" ?>
 
 
-			<article class="main-content col-xs-8">
-			
-		
-	
-	<?php 
 
-	/*  Create a link saying Click Here, and set 
-	the link href to pass some parameters and use the GET super global to see it
+    <section class="content">
 
-		Step 2 - Set a cookie that expires in one week
+        <aside class="col-xs-4">
 
-		Step 3 - Start a session and set it to value, any value you want.
-	*/
-	
+            <?php Navigation();?>
+
+
+        </aside>
+        <!--SIDEBAR-->
+
+
+        <article class="main-content col-xs-8">
+
+
+
+            <?php
+
+                if(isset($_GET['source'])) {
+                    echo $_GET['source'] . "<br>";
+                }
+
+            if(isset( $_SESSION['message'])) {
+                    echo  $_SESSION['message'] . "<br>";
+                }
+
 	?>
 
 
+            <a href="9.php?source=12334">link</a>
+<?php
 
+            if(isset($_COOKIE["Davut"])) {
+                echo $_COOKIE["Davut"];
+            }
+            ?>
 
-
-</article><!--MAIN CONTENT-->
-<?php include "includes/footer.php" ?>
+        </article>
+        <!--MAIN CONTENT-->
+        <?php include "includes/footer.php" ?>
