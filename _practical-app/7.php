@@ -1,39 +1,44 @@
 <?php include "functions.php" ?>
 <?php include "includes/header.php" ?>
-    
 
-	<section class="content">
+<?php
 
-		<aside class="col-xs-4">
+       $connection = mysqli_connect('localhost', 'root', '112358', 'loginapp');
 
-		<?php Navigation();?>
-			
-			
-		</aside><!--SIDEBAR-->
+        if(!$connection) {
+            die("Database Connection Failed") . mysqli_error($connection);
+        }
 
+        $query = "SELECT * FROM users";
 
-	<article class="main-content col-xs-8">
-	
-	
-	
-	<?php  
+        $result = mysqli_query($connection,$query);
 
-	/*  Step 1 - Create a database in PHPmyadmin
+        if(!$result) {
+            die("QUERY FAILED");
+        }
 
-		Step 2 - Create a table like the one from the lecture
-
-		Step 3 - Insert some Data
-
-		Step 4 - Connect to Database and read data
-
-*/
-	
 	?>
 
+    <section class="content">
 
+        <aside class="col-xs-4">
 
+            <?php Navigation();?>
 
+        </aside>
+        <!--SIDEBAR-->
 
-</article><!--MAIN CONTENT-->
+        <article class="main-content col-xs-8">
 
-<?php include "includes/footer.php" ?>
+            <?php
+
+        while($record = mysqli_fetch_assoc($result)) {
+            echo $record['password'] . "<br>";
+        }
+
+    ?>
+
+        </article>
+        <!--MAIN CONTENT-->
+
+        <?php include "includes/footer.php" ?>
